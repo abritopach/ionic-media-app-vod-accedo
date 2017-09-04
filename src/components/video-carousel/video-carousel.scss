@@ -1,0 +1,18 @@
+video-carousel {
+
+  .video-thumbnail {
+    display: flex;
+    justify-content: space-between;
+    //justify-content: space-around;
+    overflow: auto;
+    overflow-y: hidden;
+  }
+
+  .video-thumbnail video {
+    width: 214px;
+    height: 317px;
+    padding: 1px;
+    border: 1px solid grey;
+  }
+
+}

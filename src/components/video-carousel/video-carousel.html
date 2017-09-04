@@ -1,0 +1,12 @@
+<!-- Generated template for the VideoCarouselComponent component -->
+<ion-col col-12>
+    <h2 text-center>Videos</h2>
+    <div class="video-thumbnail">
+        <div *ngFor="let video of videos">
+            <video poster={{video.images[0].url}}>
+                <source [src]="video?.contents[0].url" type="video/mp4" />
+            </video>
+            <p>{{video?.title}}</p>
+        </div>
+    </div>
+</ion-col>
