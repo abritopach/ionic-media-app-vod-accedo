@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { HistoryPage } from '../pages/history/history';
 import { MoviesServiceProvider } from '../providers/movies-service/movies-service';
 
 import { VideoCarouselComponent } from '../components/video-carousel/video-carousel';
@@ -15,6 +16,7 @@ import { VideoCarouselComponent } from '../components/video-carousel/video-carou
     declarations: [
         MyApp,
         HomePage,
+        HistoryPage,
         VideoCarouselComponent
     ],
     imports: [
@@ -25,7 +27,8 @@ import { VideoCarouselComponent } from '../components/video-carousel/video-carou
     bootstrap: [IonicApp],
     entryComponents: [
         MyApp,
-        HomePage
+        HomePage,
+        HistoryPage
     ],
     providers: [
         StatusBar,

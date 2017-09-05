@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { MoviesServiceProvider } from '../../providers/movies-service/movies-service'
+import { MoviesServiceProvider } from '../../providers/movies-service/movies-service';
+
+import { HistoryPage } from '../history/history';
 
 
 @Component({
@@ -22,6 +24,10 @@ export class HomePage {
                 //console.log(data);
                 this.videos = data;
             });
+    }
+
+    handleClickHistory() {
+        this.navCtrl.push(HistoryPage);
     }
 
 }

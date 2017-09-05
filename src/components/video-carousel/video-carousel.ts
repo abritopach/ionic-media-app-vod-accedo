@@ -60,7 +60,6 @@ export class VideoCarouselComponent {
 
             if (playPromise !== undefined) {
 
-                /*
                 var exists = false;
                 for (var i = 0; i < this.historyVideos.length; i++) {
                     if (this.historyVideos[i].id === selectedVideo.id) {
@@ -77,8 +76,6 @@ export class VideoCarouselComponent {
                     this.historyVideos.push(selectedVideo);
                     localStorage.setItem('historyVideos', JSON.stringify(this.historyVideos));
                 }
-                 */
-
 
                 playPromise.then(_ => {
                     // Automatic playback started!
