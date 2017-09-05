@@ -1,10 +1,10 @@
 <!-- Generated template for the VideoCarouselComponent component -->
 <ion-col col-12>
     <h2 text-center>Videos</h2>
-    <div class="video-thumbnail">
-        <div *ngFor="let video of videos" (click)="handleSelectedVideo(video)">
-            <video id="{{video.id}}" poster={{video.images[0].url}}>
-                <source [src]="video?.contents[0].url" type="video/mp4" />
+    <div #videoThumbnail class="video-thumbnail">
+        <div *ngFor="let video of videos; let i=index;" (click)="handleSelectedVideo(video)" (keydown)="handleKeyPressed(video, i, $event)">
+            <video tabIndex="0" id="{{video.id}}" poster={{video.images[0].url}}>
+                <source [src]="video?.contents[0].url" type="video/mp4"/>
             </video>
             <p text-center>{{video?.title}}</p>
         </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild } from '@angular/core';
 
 /**
  * Generated class for the VideoCarouselComponent component.
@@ -13,12 +13,15 @@ import { Component, Input } from '@angular/core';
 export class VideoCarouselComponent {
 
     videos: any;
+    elem: any;
     historyVideos: any = [];
 
     @Input()
     set videosData(videos: Array<Object>) {
         this.videos = videos;
     }
+
+    @ViewChild('videoThumbnail') videoCarousel: ElementRef;
 
     constructor() {
         this.historyVideos = localStorage.getItem('historyVideos') ? JSON.parse(localStorage.getItem('historyVideos')) : [];
@@ -27,6 +30,29 @@ export class VideoCarouselComponent {
     handleSelectedVideo(video) {
         let elem = document.getElementById(video.id);
         this.handleFullScreenVideo(video, elem);
+    }
+
+    handleKeyPressed(video, i, event) {
+        this.elem = document.getElementById(video.id);
+
+        this.resetVideo(this.elem);
+
+        if (event.keyCode === 37) {
+            if (i > 0) {
+                this.elem = this.videoCarousel.nativeElement.children[i - 1];
+                this.elem.firstElementChild.focus();
+            }
+        } else if (event.keyCode === 39) {
+            if (i < this.videoCarousel.nativeElement.children.length - 1) {
+                this.elem = this.videoCarousel.nativeElement.children[i + 1];
+                this.elem.firstElementChild.focus();
+            }
+        }
+
+        if (event.key === 'Enter') {
+            this.handleFullScreenVideo(video, this.elem)
+        }
+
     }
 
     handleFullScreenVideo(selectedVideo, elem) {
