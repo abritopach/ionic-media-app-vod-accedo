@@ -15,7 +15,6 @@ export class MoviesServiceProvider {
     static MOVIES_API_ENDPOINT: string = 'https://demo2697834.mockable.io/movies';
 
     constructor(public http: Http) {
-        console.log('Hello MoviesServiceProvider Provider');
     }
 
     getAll() {

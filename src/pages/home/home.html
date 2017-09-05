@@ -4,7 +4,7 @@
             <a href="https://www.accedo.tv/" target="_blank"><img src="https://www.accedo.tv/wp-content/uploads/2013/09/AccedoLogo_RGB.png" width="100px" style="display:inline-block"/></a>
         </ion-title>
         <ion-buttons end>
-            <button (click)="handleClickHistory()"><span>History <ion-icon name="film"></ion-icon></span></button>
+            <button (click)="handleClickHistory()"><span>History</span></button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
@@ -13,3 +13,9 @@
     <h1 text-center class="welcome">Welcome to Media App Vod Accedo built with Ionic.</h1>
     <video-carousel [videosData]="videos"></video-carousel>
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-title text-center>© 2017 Adrián Brito Pacheco <a href="https://github.com/abritopach/" target="_blank">GitHub</a></ion-title>
+    </ion-toolbar>
+</ion-footer>
