@@ -1,26 +1,62 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Ionic-Media-App-Vod-Accedo
 
-## How to use this template
+Project that build a simple Media App VOD (Video On-Demand) application that keeps track of a list of videos the user has 
+watched. 
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+** Application Features
+  
+  1. Application should display a list of videos in a horizontal carousel on the home page which can be scrollable.
+  2. User should be able to select a video to play in full screen.
+  3. When the video is finished, the application should go back to the previous page.
+  4. The user should be able to use a mouse and keyboard to select the video.
+  5. The user should be able to see a list of videos they have previously watched.
+  6. The application must be responsible to changing screen sizes. You do not need to implement a mobile view but it should at least adjust based on the
+  desktop browser width.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+## Api video list example
 
-### With the Ionic CLI:
+You may use this API for a video list https://demo2697834.mockable.io/movies
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+## Running
+
+Before you go through this example, you should have at least a basic understanding of Ionic concepts. You must also already have ionic installed on your machine.
+
+* Test in localhost:
+
+To run it, cd into `ionic-media-app-vod-accedo` and run:
 
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+npm install
+ionic serve
 ```
 
-Then, to run it, cd into `myBlank` and run:
+* Test in Android: 
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+ionic cordova add platform android
+ionic cordova run android
 ```
 
-Substitute ios for android if not on a Mac.
+* Test in iOS: 
 
+```bash
+ionic cordova add platform ios
+ionic cordova run ios
+```
+
+## Requirements
+
+* [Node.js](http://nodejs.org/)
+* [Ionic](https://ionicframework.com/getting-started/)
+
+## License
+   
+The MIT License (MIT) Copyright (c)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   
+Original work Copyright (c) 2017 Adrián Brito
