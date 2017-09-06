@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild, ViewChildren, QueryList  } from '@angular/core';
 
 /**
  * Generated class for the VideoCarouselComponent component.
@@ -22,6 +22,7 @@ export class VideoCarouselComponent {
     }
 
     @ViewChild('videoThumbnail') videoCarousel: ElementRef;
+    @ViewChildren('myvideo') videoList:QueryList<any>;
 
     constructor() {
         this.historyVideos = localStorage.getItem('historyVideos') ? JSON.parse(localStorage.getItem('historyVideos')) : [];
@@ -33,6 +34,13 @@ export class VideoCarouselComponent {
     }
 
     handleKeyPressed(video, i, event) {
+
+        this.videoList.forEach((child) => {
+            if (video.id == child.nativeElement.id) {
+                //this.elem = child.nativeElement;
+            }
+        })
+
         this.elem = document.getElementById(video.id);
 
         this.resetVideo(this.elem);

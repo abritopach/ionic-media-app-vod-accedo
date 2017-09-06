@@ -3,7 +3,7 @@
     <h2 text-center>Videos</h2>
     <div #videoThumbnail class="video-thumbnail">
         <div *ngFor="let video of videos; let i=index;" (click)="handleSelectedVideo(video)" (keydown)="handleKeyPressed(video, i, $event)">
-            <video tabIndex="0" id="{{video.id}}" poster={{video.images[0].url}}>
+            <video #myvideo tabIndex="0" id="{{video.id}}" poster={{video.images[0].url}}>
                 <source [src]="video?.contents[0].url" type="video/mp4"/>
             </video>
             <p text-center>{{video?.title}}</p>
